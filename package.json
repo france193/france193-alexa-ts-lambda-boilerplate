@@ -1,0 +1,40 @@
+{
+  "name": "france193-alexa-ts-lambda-boilerplate",
+  "version": "2.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/france193/france193-alexa-ts-lambda-boilerplate.git",
+  "author": "Francesco Longo <france193.dev@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm ./lambda/dist/*",
+    "copy": "cp ./lambda/util.js ./lambda/package.json ./lambda/dist",
+    "deploy_only": "ask deploy --profile france193",
+    "deploy": "yarn build && yarn copy && yarn deploy_only",
+    "dialog": "ask dialog --profile france193 --locale it-IT"
+  },
+  "dependencies": {
+    "ask-sdk": "^2.12.1",
+    "ask-sdk-core": "^2.12.1",
+    "ask-sdk-model": "^1.39.0",
+    "node-fetch": "^3.2.10"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@types/node-fetch": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "ask-sdk-local-debug": "^1.1.0",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.2"
+  }
+}
