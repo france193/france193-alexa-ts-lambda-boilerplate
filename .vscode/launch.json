@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Alexa Skill (Node.js)",
+      "type": "node",
+      "request": "launch",
+      "program": "${command:ask.debugAdapterPath}",
+      "args": [
+        "--profile",
+        "france193",
+        "--accessToken",
+        "${command:ask.accessToken}",
+        "--skillId",
+        "${command:ask.skillIdFromWorkspace}",
+        "--handlerName",
+        "handler",
+        "--skillEntryFile",
+        "${workspaceFolder}/lambda/dist/index.js",
+        "--region",
+        "EU"
+      ]
+    }
+  ]
+}
